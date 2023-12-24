@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codewithFaraz</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            margin: 0;
+            height: 100vh;
+            background: rgb(218, 181, 181);
+        }
+
+        .arrow{
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #001c46;
+            border-radius: 5px;
+            animation: animate 1.2s ease-in-out infinite;
+        }
+
+        .arrow:before, .arrow:after{
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 5px;
+            right: -2px;
+            height: 100%;
+            width: 15px;
+            background: #001c46;
+        }
+
+        .arrow:before{
+            top: -4px;
+            transform: rotate(45deg);
+        }
+
+        .arrow::after{
+            bottom: -4px;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes animate {
+            0%, 100%{
+                transform: translate(0,0);
+            }
+            50%{
+                transform: translate(20px, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <span class="arrow"></span>
+</body>
+</html>
